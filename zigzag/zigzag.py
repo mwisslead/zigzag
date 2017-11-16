@@ -21,4 +21,4 @@ def zigzag_pts(steps):
         #for each step add +1, 0, or -1. Value is 0 if we are a multiple of a reverse or not a multiple of a previous axis' reverse.
         #add 1 if we're less than halfway through 2 reversals and -1 if more than halfway.
         pt += np.sign([(s - cnt % (2 * s)) * (cnt % s) * (c * cnt % s == 0) for s, c in zip(reverse_steps, steps)])
-        yield pt
+        yield pt.copy()
