@@ -1,9 +1,6 @@
-import numpy as np
+from builtins import range
 
-try:
-    range = xrange
-except NameError:
-    pass
+import numpy as np
 
 def zigzag_pts(steps):
     '''produce zigzag coordinates visiting every integer point in cube with faces parallel to'''
